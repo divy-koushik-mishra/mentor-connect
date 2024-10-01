@@ -3,13 +3,13 @@ const Footer = () => {
   return (
     <footer className="bg-[#F0F0F0] flex flex-col items-center justify-center p-4 py-10 md:py-24">
       <div className="w-3/4 flex flex-col space-y-5 justify-center items-center space-x-5">
-        <h2 className="text-5xl">Register Now</h2>
+        <h2 className="md:text-5xl text-3xl">Register Now</h2>
         <input
           type="text"
-          className="md:w-1/2 px-10 py-5 rounded-full outline-none"
+          className="md:w-1/2 w-full px-10 py-3 border md:py-5 rounded-full outline-none"
           placeholder="Email Address..."
         />
-        <button className="bg-[#2B2B2B] rounded-full px-9 py-5 text-white ">
+        <button className="bg-[#2B2B2B] rounded-full px-9 py-3 md:py-5 text-white ">
           Join Now!
         </button>
       </div>

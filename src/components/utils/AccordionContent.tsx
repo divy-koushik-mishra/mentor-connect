@@ -19,7 +19,7 @@ export function AccordionContent(props: AccordionContentProps) {
 
   return (
     <>
-      <Accordion open={open === 1}  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+      <Accordion open={open === 1} className="text-left"  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <AccordionHeader onClick={() => handleOpen(1)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           {props.title}
         </AccordionHeader>

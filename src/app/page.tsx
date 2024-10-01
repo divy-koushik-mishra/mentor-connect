@@ -1,5 +1,5 @@
 import AboutSection from "@/components/AboutSection";
-import CtaSection from "@/components/CtaSection";
+// import CtaSection from "@/components/CtaSection";
 import FaqSection from "@/components/FaqSection";
 import Hero from "@/components/Hero";
 // import OrganizationSection from "@/components/OrganizationSection";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="">
         <Hero />
-      <CtaSection />
+      {/* <CtaSection /> */}
       <AboutSection />
       <Sessions />
       {/* <OrganizationSection /> */}

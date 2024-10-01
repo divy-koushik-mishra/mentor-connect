@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-[80vh] md:min-h-[60vh]  flex flex-col md:flex-row items-center justify-center px-4 py-10 md:py-24">
-      <div className="md:w-1/2 w-full flex justify-center md:px-24">
+    <section className="min-h-[80vh] md:min-h-[60vh]  flex flex-col-reverse md:flex-row items-center justify-center px-4 py-10 md:py-24">
+      <div className="md:w-1/2 w-full flex justify-center mt-5 md:px-24">
         <img src="/about-cloud.webp" alt="" className="rounded-3xl w-full" />
       </div>
       <div className="md:w-1/2">

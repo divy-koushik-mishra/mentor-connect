@@ -1,4 +1,4 @@
-import {  RiArrowRightDownLine } from "@remixicon/react";
+// import {  RiArrowRightDownLine } from "@remixicon/react";
 import Image from "next/image";
   
 
@@ -14,12 +14,22 @@ const Hero = () => {
         <p className="text-center text-[#AEAEAE] px-2">
         Whether you&apos;re preparing for placements, pursuing higher education, or navigating career options, our platform connects you with the right mentors to guide you at every step.
         </p>
-        <a href="#faq">
+        {/* <a href="#faq"> */}
 
-        <button className="border flex  items-center justify-between space-x-5 px-9 py-2 border-[#AEAEAE] hover:bg-[#c7c7c7] hover:text-black transition rounded-full">
-          Get Started <RiArrowRightDownLine />{" "}
+        <div className=" w-full flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0  md:space-x-5">
+        <input
+          type="text"
+          className="md:w-1/2 w-full px-10 py-3 border md:py-5 rounded-full outline-none"
+          placeholder="Email Address..."
+        />
+        <button className="bg-[#2B2B2B] rounded-full px-9 py-3 md:py-5 text-white ">
+          Join Now!
         </button>
-        </a>
+      </div>
+        {/* <button className="border flex  items-center justify-between space-x-5 px-9 py-2 border-[#AEAEAE] hover:bg-[#c7c7c7] hover:text-black transition rounded-full">
+          Get Started <RiArrowRightDownLine />{" "}
+        </button> */}
+        {/* </a> */}
       </div>
 
       <div className="relative flex justify-center items-center mb-0 my-10">
