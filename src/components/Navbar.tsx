@@ -4,8 +4,8 @@ import TopBar from "./TopBar";
 const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    // { name: "About", href: "/about" },
+    // { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
   return (
