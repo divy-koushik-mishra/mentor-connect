@@ -2,7 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import FaqSection from "@/components/FaqSection";
 import Hero from "@/components/Hero";
-import OrganizationSection from "@/components/OrganizationSection";
+// import OrganizationSection from "@/components/OrganizationSection";
 import Sessions from "@/components/Sessions";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <CtaSection />
       <AboutSection />
       <Sessions />
-      <OrganizationSection />
+      {/* <OrganizationSection /> */}
       <FaqSection />
     </div>
   );

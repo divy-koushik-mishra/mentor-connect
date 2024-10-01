@@ -110,10 +110,10 @@ const ContactForm = () => {
       return;
     }
 
-    const formattedData = {
-      ...formData,
-      session_topics: formData.session_topics.join(', '), // Convert the array to a comma-separated string
-    };
+    // const formattedData = {
+    //   ...formData,
+    //   session_topics: formData.session_topics.join(', '), // Convert the array to a comma-separated string
+    // };
 
     try {
       // await createContactDocument(formattedData);

@@ -1,4 +1,4 @@
-import {  RiArrowRightDownLine, RiArrowRightUpLine } from "@remixicon/react";
+import {  RiArrowRightDownLine } from "@remixicon/react";
 import Image from "next/image";
   
 
