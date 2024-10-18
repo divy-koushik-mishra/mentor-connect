@@ -10,7 +10,7 @@ type AllowedEmailDomains = {
 const allowedEmailDomains: AllowedEmailDomains = {
   "example.edu": "Example University",
   "college.edu": "College of Education",
-  "university.ac.in": "University of Technology"
+  "university.ac.in": "University of Technology",
 };
 
 interface FormData {
@@ -47,53 +47,76 @@ const ContactForm: React.FC = () => {
   useEffect(() => {
     const emailDomain = formData.email.split('@')[1];
     if (emailDomain && allowedEmailDomains[emailDomain]) {
-      setFormData(prevData => ({
+      setFormData((prevData) => ({
         ...prevData,
-        college_name: allowedEmailDomains[emailDomain]
+        college_name: allowedEmailDomains[emailDomain],
+      }));
+    } else {
+      // Reset college_name if email domain is not recognized
+      setFormData((prevData) => ({
+        ...prevData,
+        college_name: "",
       }));
     }
   }, [formData.email]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    // Validate the field in real-time
+    validateField(name, value);
+  };
+
+  const validateField = (name: string, value: string): boolean => {
+    let errorMessage = "";
+    let isValid = true;
+
+    if (name === "name") {
+      const nameRegex = /^[a-zA-Z\s\-]{2,}$/;
+      if (!value.trim() || !nameRegex.test(value)) {
+        errorMessage = "Name must be at least 2 characters long and contain only letters, spaces, or hyphens.";
+        isValid = false;
+      }
+    } else if (name === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!value.trim() || !emailRegex.test(value)) {
+        errorMessage = "Valid email is required.";
+        isValid = false;
+      }
+    } else if (name === "phone_number") {
+      const phoneRegex = /^\d{10}$/;
+      if (!value.trim() || !phoneRegex.test(value)) {
+        errorMessage = "Phone number must be exactly 10 digits long.";
+        isValid = false;
+      }
+    } else if (name === "college_name") {
+      if (!value.trim()) {
+        errorMessage = "College name is required.";
+        isValid = false;
+      }
+    }
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: errorMessage,
+    }));
+
+    return isValid;
   };
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {
-      name: "",
-      email: "",
-      phone_number: "",
-      college_name: "",
-    };
     let isValid = true;
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-      isValid = false;
-    }
+    (Object.keys(formData) as Array<keyof FormData>).forEach((key) => {
+      if (!validateField(key, formData[key])) {
+        isValid = false;
+      }
+    });
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
-      newErrors.email = "Valid email is required";
-      isValid = false;
-    }
-
-    if (!formData.phone_number.trim()) {
-      newErrors.phone_number = "Phone number is required";
-      isValid = false;
-    }
-
-    const emailDomain = formData.email.split('@')[1];
-    if (!allowedEmailDomains[emailDomain] && !formData.college_name.trim()) {
-      newErrors.college_name = "College name is required";
-      isValid = false;
-    }
-
-    setErrors(newErrors);
     return isValid;
   };
 
@@ -105,10 +128,8 @@ const ContactForm: React.FC = () => {
     }
 
     try {
-      // Here you would typically send the form data to your backend
       console.log("Form submitted:", formData);
       toast.success("Form submitted successfully!");
-      // Reset the form
       setFormData({
         name: "",
         email: "",
@@ -123,7 +144,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="md:w-3/4 mx-auto p-6 bg-white shadow-2xl rounded-3xl">
+    <div className="md:w-3/4 mx-auto p-6 w-full bg-white shadow-md rounded-3xl">
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-6">
           <div>
@@ -173,7 +194,7 @@ const ContactForm: React.FC = () => {
               value={formData.college_name}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 outline-none p-4"
-              required={!allowedEmailDomains[formData.email.split('@')[1]]}
+              required
               placeholder="Your College Name"
               readOnly={!!allowedEmailDomains[formData.email.split('@')[1]]}
             />
@@ -187,6 +208,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 outline-none p-4"
               placeholder="Your message here..."
+              maxLength={500}
             ></textarea>
           </div>
           <div>
