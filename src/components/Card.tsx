@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Briefcase, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 interface MentorCardProps {
   name: string;
@@ -13,10 +14,12 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
       <div className="relative h-48">
-        <img
+        <Image
           src={image || "/placeholder-mentor.jpg"}
           alt={name}
           className="w-full h-full object-cover"
+          height={192}
+          width={288}
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
           <h3 className="text-white text-xl font-bold">{name}</h3>
