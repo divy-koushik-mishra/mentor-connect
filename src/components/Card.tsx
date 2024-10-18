@@ -1,37 +1,44 @@
-import { RiArrowRightUpLine } from "@remixicon/react";
-import React from "react";
+import React from 'react';
+import { User, Briefcase, Clock } from 'lucide-react';
 
-interface CardProps {
-  heading: string;
-  body: string;
+interface MentorCardProps {
+  name: string;
+  profession: string;
+  experience: number;
+  description: string;
   image?: string;
 }
 
-const Card: React.FC<CardProps> = (props) => {
+const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, description, image }) => {
   return (
-    <div className="flex flex-col items-center justify-center rounded-3xl w-full md:w-1/3 md:mx-4 overflow-hidden relative shadow-2xl hover:scale-105 transition duration-300">
-      <div className="aspect-w-16 aspect-h-9 w-full">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+      <div className="relative h-48">
         <img
-          src={props.image || `https://cdn.pixabay.com/photo/2015/01/20/12/51/ipad-605420_640.jpg`}
+          src={image || "/placeholder-mentor.jpg"}
+          alt={name}
           className="w-full h-full object-cover"
-          alt={props.heading}
         />
-      </div>
-      <div className="w-full rounded-xl flex items-center justify-between absolute bottom-4 px-5">
-        <div className="flex flex-col items-center rounded-full w-full bg-white bg-opacity-90">
-          <div className="flex w-full px-4 py-3 items-center justify-between">
-            <div className="flex flex-col items-start">
-              <h3 className="font-semibold text-lg">{props.heading}</h3>
-              <p className="text-sm text-gray-600">{props.body}</p>
-            </div>
-            <div className="border w-10 h-10 flex justify-center items-center border-black rounded-full ml-2 flex-shrink-0">
-              <RiArrowRightUpLine className="w-5 h-5" />
-            </div>
-          </div>
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+          <h3 className="text-white text-xl font-bold">{name}</h3>
         </div>
+      </div>
+      <div className="p-4">
+        <div className="flex items-center mb-2">
+          <Briefcase className="w-5 h-5 text-gray-500 mr-2" />
+          <p className="text-gray-700">{profession}</p>
+        </div>
+        <div className="flex items-center mb-3">
+          <Clock className="w-5 h-5 text-gray-500 mr-2" />
+          <p className="text-gray-700">{experience} years experience</p>
+        </div>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center w-full">
+          Book a Session
+          <User className="w-5 h-5 ml-2" />
+        </button>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default MentorCard;
