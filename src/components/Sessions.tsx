@@ -107,7 +107,7 @@ const Sessions: React.FC = () => {
     <section
       data-scroll
       data-scroll-speed="0.8"
-      className="p-4 min-h-screen md:min-h-[60vh] flex flex-col items-center md:py-24"
+      className="p-4 min-h-screen md:min-h-[60vh] flex flex-col items-center md:py-24 my-10"
     >
       <h3 className="uppercase tracking-[0.3rem] text-[#AEAEAE] mb-2">SESSIONS</h3>
       <h2 className="md:text-5xl text-4xl text-center md:text-left mb-4">Meet Our Mentors</h2>
@@ -128,7 +128,7 @@ const Sessions: React.FC = () => {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {mentors.map((mentor, index) => (
-              <div key={index} className={`w-full flex-shrink-0 ${isMobile ? '' : 'md:w-1/3'} p-2`}>
+              <div key={index} className={`w-full flex-shrink-0 ${isMobile ? '' : 'md:w-1/3'} p-2 py-4`}>
                 <MentorCard {...mentor} />
               </div>
             ))}
