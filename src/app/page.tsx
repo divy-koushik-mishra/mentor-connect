@@ -4,6 +4,7 @@ import FaqSection from "@/components/FaqSection";
 import Hero from "@/components/Hero";
 // import OrganizationSection from "@/components/OrganizationSection";
 import Sessions from "@/components/Sessions";
+import TestimonialSection from "@/components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       {/* <CtaSection /> */}
       <AboutSection />
       <Sessions />
+      <TestimonialSection />
       {/* <OrganizationSection /> */}
       <FaqSection />
     </div>
