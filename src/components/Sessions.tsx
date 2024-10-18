@@ -152,7 +152,7 @@ const Sessions: React.FC = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`h-2 w-2 rounded-full mx-1 ${
-                currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
+                currentIndex === index ? 'bg-[#2B2B2B]' : 'bg-gray-300'
               }`}
             />
           ))}

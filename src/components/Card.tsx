@@ -35,7 +35,7 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
           <p className="text-gray-700">{experience} years experience</p>
         </div>
         <p className="text-gray-600 mb-4">{description}</p>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center w-full">
+        <button className="bg-[#2B2B2B] text-white px-4 py-2 rounded-full  flex items-center justify-center w-full">
           Book a Session
           <User className="w-5 h-5 ml-2" />
         </button>
