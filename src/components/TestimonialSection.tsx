@@ -197,8 +197,8 @@ const TestimonialSection: React.FC = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-3 w-3 rounded-full mx-2 ${
-                currentIndex === index ? "bg-blue-600" : "bg-gray-300"
+              className={`h-2 w-2 rounded-full mx-2 ${
+                currentIndex === index ? 'bg-[#2B2B2B]' : 'bg-gray-300'
               }`}
             />
           ))}
