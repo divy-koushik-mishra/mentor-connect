@@ -1,4 +1,5 @@
 "use client"
+import { saveContactFormData } from "@/lib/appwrite";
 import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,32 +17,32 @@ const allowedEmailDomains: AllowedEmailDomains = {
 interface FormData {
   name: string;
   email: string;
-  phone_number: string;
-  college_name: string;
+  phone: string;
+  college: string;
   message: string;
 }
 
 interface FormErrors {
   name: string;
   email: string;
-  phone_number: string;
-  college_name: string;
+  phone: string;
+  college: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    phone_number: "",
-    college_name: "",
+    phone: "",
+    college: "",
     message: "",
   });
 
   const [errors, setErrors] = useState<FormErrors>({
     name: "",
     email: "",
-    phone_number: "",
-    college_name: "",
+    phone: "",
+    college: "",
   });
 
   useEffect(() => {
@@ -49,13 +50,13 @@ const ContactForm: React.FC = () => {
     if (emailDomain && allowedEmailDomains[emailDomain]) {
       setFormData((prevData) => ({
         ...prevData,
-        college_name: allowedEmailDomains[emailDomain],
+        college: allowedEmailDomains[emailDomain],
       }));
     } else {
-      // Reset college_name if email domain is not recognized
+      // Reset college if email domain is not recognized
       setFormData((prevData) => ({
         ...prevData,
-        college_name: "",
+        college: "",
       }));
     }
   }, [formData.email]);
@@ -87,13 +88,13 @@ const ContactForm: React.FC = () => {
         errorMessage = "Valid email is required.";
         isValid = false;
       }
-    } else if (name === "phone_number") {
+    } else if (name === "phone") {
       const phoneRegex = /^\d{10}$/;
       if (!value.trim() || !phoneRegex.test(value)) {
         errorMessage = "Phone number must be exactly 10 digits long.";
         isValid = false;
       }
-    } else if (name === "college_name") {
+    } else if (name === "college") {
       if (!value.trim()) {
         errorMessage = "College name is required.";
         isValid = false;
@@ -128,13 +129,14 @@ const ContactForm: React.FC = () => {
     }
 
     try {
-      console.log("Form submitted:", formData);
+      const response = await saveContactFormData(formData);
+      console.log("Form submitted:", response);
       toast.success("Form submitted successfully!");
       setFormData({
         name: "",
         email: "",
-        phone_number: "",
-        college_name: "",
+        phone: "",
+        college: "",
         message: "",
       });
     } catch (error) {
@@ -177,28 +179,28 @@ const ContactForm: React.FC = () => {
             <label className="block text-base font-medium text-gray-700">Phone Number</label>
             <input
               type="tel"
-              name="phone_number"
-              value={formData.phone_number}
+              name="phone"
+              value={formData.phone}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 outline-none p-4"
               required
               placeholder="1234567890"
             />
-            {errors.phone_number && <p className="text-red-500 text-base">{errors.phone_number}</p>}
+            {errors.phone && <p className="text-red-500 text-base">{errors.phone}</p>}
           </div>
           <div>
             <label className="block text-base font-medium text-gray-700">College Name</label>
             <input
               type="text"
-              name="college_name"
-              value={formData.college_name}
+              name="college"
+              value={formData.college}
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 outline-none p-4"
               required
               placeholder="Your College Name"
               readOnly={!!allowedEmailDomains[formData.email.split('@')[1]]}
             />
-            {errors.college_name && <p className="text-red-500 text-base">{errors.college_name}</p>}
+            {errors.college && <p className="text-red-500 text-base">{errors.college}</p>}
           </div>
           <div>
             <label className="block text-base font-medium text-gray-700">Message (Optional)</label>
