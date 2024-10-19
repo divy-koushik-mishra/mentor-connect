@@ -4,7 +4,7 @@
 const Hero = () => {
   
   return (
-    <section data-scroll className=" w-full flex flex-col md:justify-between items-center px-5 md:px-0 ">
+    <section data-scroll className="w-full flex flex-col  justify-center items-center px-5 md:px-0 hero-bg ">
       <div className="flex flex-col min-h-[70vh] items-center justify-center w-full md:w-1/2 space-y-7 mb-10 mt-0">
         <h2 className="text-[#AEAEAE] tracking-[0.3rem] uppercase">Expert Guidance</h2>
         <h2 className="md:text-5xl text-4xl text-center">
