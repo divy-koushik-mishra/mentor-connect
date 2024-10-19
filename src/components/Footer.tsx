@@ -1,5 +1,11 @@
 
+// import {ROUTES_META } from "../constants/routeMeta";
 const Footer = () => {
+  // const currentRoute = window.location.pathname.toString();
+  // const routeMeta = ROUTES_META[currentRoute];
+  // if (routeMeta && !routeMeta.showFooter) {
+  //   return null;
+  // }
   return (
     <footer className="bg-[#F0F0F0] flex flex-col items-center justify-center p-4 py-10 md:py-24">
       <div className="md:w-3/4  w-full flex flex-col space-y-5 justify-center items-center">

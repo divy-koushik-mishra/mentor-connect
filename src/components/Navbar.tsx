@@ -45,7 +45,7 @@ const Navbar = () => {
             {isDrawerOpen ? <RiCloseFill size={24} /> : <RiMenu2Line size={24} />}
           </button>
         </div>
-        <div className={`fixed top-0 right-0 z-40 h-full w-full bg-white transform transition-transform duration-300 ease-in-out ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} md:relative md:transform-none md:flex md:w-auto md:bg-transparent md:transition-none`}>
+        <div className={`fixed top-0 right-0 z-40 h-full w-full bg-white menu-drawer-bg transform transition-transform duration-300 ease-in-out ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} md:relative md:transform-none md:flex md:w-auto md:bg-transparent md:transition-none`}>
           <ul className="flex flex-col md:flex-row justify-center items-center h-full md:h-auto">
             {navItems.map((item, index) => (
               <li
