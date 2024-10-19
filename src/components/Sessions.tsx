@@ -14,6 +14,21 @@ interface Mentor {
 const Sessions: React.FC = () => {
   const mentors: Mentor[] = [
     {
+      name: 'Shubh Gupta',
+      profession: 'AI Engineer',
+      experience: 2,
+      description:
+        'Hi! I’m an AI Engineer based in Houston, Texas, United States. I graduated with a degree in Mathematics and Computing from IIT Delhi in 2022. Since then, I’ve worked on a diverse range of projects, including Self-Driving cars, LLMs, Distributed Training, and Agentic workflows for LLMs. Currently, I’m part of the team at ThirdAI, where I design high-throughput and low-latency systems at scale for retrieval-augmented generation (RAG). Additionally, I serve as a Lead Engineer part-time at a stealth startup, focusing on designing scalable search and recommender systems.',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQHIiw6mXJWe7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719018958103?e=1734566400&v=beta&t=GnkDFZIMuwTn3w19_zUgkzlX9Qfr-SvL6QPp-XlKVEc',
+    },
+    {
+      name: 'Kanishka Mandherna',
+      profession: 'Operations Manager',
+      experience: 4,
+      description: 'I am an Operations Manager at ITC Limited, a multinational conglomerate in India, where I manage operations and drive product innovation and launches for Sunbean Coffee and Fabelle Exquisite Chocolates, two of the premium brands of ITC. I have a Bachelor of Technology in Chemical Engineering and a Minor degree in Business Administration and Management from Indian Institute of Technology, Delhi. I did my research entern from ETH Zurich in my 2nd year',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQHFDEI6w5xxGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719125682986?e=1734566400&v=beta&t=6RurfhtrBidiNcwcp5L52RsAfYERKVE8rqz2AgSyFl4',
+    },
+    {
       name: 'Saksham Saxena',
       profession: 'Product Designer',
       experience: 5,
@@ -22,26 +37,18 @@ const Sessions: React.FC = () => {
       image: 'https://media.licdn.com/dms/image/v2/C5103AQF291ROcWTnYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1563447351526?e=1734566400&v=beta&t=VzNJbzQcnECPCAddAbbfCYk6ZR2AJVN7GtuugwKuods',
     },
     {
-      name: 'Shaurya Jindal',
-      profession: 'Associate Consultant',
-      experience: 7,
-      description: 'Hi! I am a Product Designer currently based in Seattle, Washington, United States. I have been actively involved in digital product design since 2019 across a range of domains, including web experiences, fintech, productivity, wearables, and IoT. I have previously worked at Adyen, Amsterdam and Microsoft, India. I enjoy working at the crossroads of psychology, technology, and creativity.',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQGYzNgysjhJqg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695031932874?e=1734566400&v=beta&t=L8vjKNFbsiBPkc0rz87E9c5foxPaKv8-2YT99sj2aHk',
+      name: 'Shorya Jain',
+      profession: 'Private Equity Analyst',
+      experience: 4,
+      description: 'Hi! I am Shorya Jain, a Private Equity Analyst currently based in Mumbai, India. I began my career in strategy consulting before transitioning to private equity, where I have developed expertise in areas such as strategy, post merger integration, and data analysis. I was seconded to Amsterdam to set up cross sell for an IT services portfolio company for 6 months. I enjoy working at the intersection of finance, strategy, and data-driven insights. Outside of work, I spend my time reading, swimming, and playing guitar.',
+      image: 'https://media.licdn.com/dms/image/v2/C4E03AQH8oXZ3Wh6Xow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1623861823485?e=1734566400&v=beta&t=xqDtlZ95RGJe1XiE0obtxeBHWSZwUdU5KUl5HJvBj5c',
     },
     {
-      name: 'Saksham Saxena',
-      profession: 'Product Designer',
-      experience: 5,
-      description:
-        'Hi! I am a Product Designer currently based in Seattle, Washington, United States. I have been actively involved in digital product design since 2019 across a range of domains, including web experiences, fintech, productivity, wearables, and IoT. I have previously worked at Adyen, Amsterdam and Microsoft, India. I enjoy working at the crossroads of psychology, technology, and creativity.',
-      image: 'https://media.licdn.com/dms/image/v2/C5103AQF291ROcWTnYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1563447351526?e=1734566400&v=beta&t=VzNJbzQcnECPCAddAbbfCYk6ZR2AJVN7GtuugwKuods',
-    },
-    {
-      name: 'Shaurya Jindal',
-      profession: 'Associate Consultant',
-      experience: 7,
-      description: 'Hi! I am a Product Designer currently based in Seattle, Washington, United States. I have been actively involved in digital product design since 2019 across a range of domains, including web experiences, fintech, productivity, wearables, and IoT. I have previously worked at Adyen, Amsterdam and Microsoft, India. I enjoy working at the crossroads of psychology, technology, and creativity.',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQGYzNgysjhJqg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695031932874?e=1734566400&v=beta&t=L8vjKNFbsiBPkc0rz87E9c5foxPaKv8-2YT99sj2aHk',
+      name: 'Valaya Ramchandani',
+      profession: 'Quantitative Researcher',
+      experience: 4,
+      description: 'Hi! I am Valaya Ramchandani, a Quantitative Researcher at JPMC, currently based in Mumbai, India. In my role, I specialize in quantitative analysis within the housing securities sector in the US, focusing on building models for risk assessment, forecasting, and stress testing. My work involves creating robust risk models to help analyze market trends and evaluate potential impacts on housing securities portfolios. Outside of work, I enjoy painting, playing guitar, and hiking.',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQH6oFleXJgX_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679672645762?e=1734566400&v=beta&t=_q90yuTpN6UtzbiuzDdcDH2mVGMD95jb2GNegibSLH0',
     },
     // Add more mentor objects here to test scrolling
   ];
@@ -152,7 +159,7 @@ const Sessions: React.FC = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`h-2 w-2 rounded-full mx-1 ${
-                currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
+                currentIndex === index ? 'bg-[#2B2B2B]' : 'bg-gray-300'
               }`}
             />
           ))}

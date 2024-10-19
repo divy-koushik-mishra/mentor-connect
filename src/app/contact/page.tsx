@@ -3,7 +3,7 @@ import ContactSidebar from "@/components/contact/ContactSidebar";
 
 const Contact = () => {
   return (
-    <section className="w-full h-full flex justify-center items-center py-10 md:px-24">
+    <section className="w-full h-full flex justify-center items-center py-10 px-5 md:px-24">
       <div className="  flex flex-col items-center">
         <div className="">
           <h2 className="text-4xl md:text-5xl text-center">Contact our team</h2>
