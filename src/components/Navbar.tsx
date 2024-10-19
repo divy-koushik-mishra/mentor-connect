@@ -34,9 +34,9 @@ const Navbar = () => {
   return (
     <header>
       <TopBar />
-      <nav className="relative flex flex-col md:flex-row md:justify-between md:items-center py-10 px-4 md:px-24">
+      <nav className="relative flex flex-col md:flex-row md:justify-between md:items-center py-5 px-4 md:px-24">
         <div className="flex justify-between items-center w-full">
-          <div className="text-3xl">Mentor Connect</div>
+          <div className="md:text-3xl text-2xl">Mentor Connect</div>
           <button
             className="md:hidden z-50"
             onClick={toggleDrawer}

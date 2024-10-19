@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen md:min-h-[60vh]  flex flex-col-reverse md:flex-row items-center justify-center p-5 md:py-24 my-5">
+    <section className="min-h-screen md:min-h-[60vh]  flex flex-col-reverse md:flex-row items-center justify-center p-5 md:pt-24 mt-5">
       <div className="md:w-1/2 w-full flex justify-center mt-5 md:px-24">
-        <Image height={160} width={320} src="/about-cloud.webp" alt="" className="rounded-3xl w-full" />
+        <Image height={376} width={564} src="/about-us.jpg" alt="" className="rounded-3xl w-full" />
       </div>
       <div className="md:w-1/2">
         <div className="flex flex-col justify-between items-center md:items-start md:w-3/4 space-y-5">
