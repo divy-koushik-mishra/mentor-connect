@@ -12,12 +12,12 @@ interface MentorCardProps {
 
 const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, description, image }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
-      <div className="relative h-48">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden ">
+      <div className="relative h-56">
         <Image
           src={image || "/placeholder-mentor.jpg"}
           alt={name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[100% 55%]"
           height={192}
           width={288}
         />
@@ -25,7 +25,8 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
           <h3 className="text-white text-xl font-bold">{name}</h3>
         </div>
       </div>
-      <div className="p-4">
+      <div className="p-4 min-h-[480px] flex flex-col justify-between">
+        <div className="">
         <div className="flex items-center mb-2">
           <Briefcase className="w-5 h-5 text-gray-500 mr-2" />
           <p className="text-gray-700">{profession}</p>
@@ -35,6 +36,8 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
           <p className="text-gray-700">{experience} years experience</p>
         </div>
         <p className="text-gray-600 mb-4">{description}</p>
+        </div>
+
         <button className="bg-[#2B2B2B] text-white px-4 py-2 rounded-full  flex items-center justify-center w-full">
           Book a Session
           <User className="w-5 h-5 ml-2" />
