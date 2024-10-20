@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Link from "next/link";
 import TopBar from "./TopBar";
 import { RiCloseFill, RiMenu2Line } from '@remixicon/react';
+import { usePathname } from 'next/navigation';
+import { ROUTES_META } from '@/constants/routeMeta';
 // import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -30,6 +32,11 @@ const Navbar = () => {
       document.body.style.overflow = 'unset';
     };
   }, [isDrawerOpen]);
+  const path = usePathname();
+  const routeMeta = ROUTES_META[path];
+  if (routeMeta && !routeMeta.showFooter) {
+    return null;
+  }
 
   return (
     <header>

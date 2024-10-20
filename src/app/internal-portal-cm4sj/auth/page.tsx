@@ -2,12 +2,16 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { login } from '@/lib/appwrite';
+import { login, isLoggedIn } from '@/lib/appwrite';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+
+  if (isLoggedIn()) {
+    router.push('/internal-portal-cm4sj');
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
