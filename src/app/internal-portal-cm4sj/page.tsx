@@ -3,6 +3,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getCurrentUser, isLoggedIn, logout } from '@/lib/appwrite';
+import Sidebar from './SideBar';
+import Header from './AdminHeader';
+import DashboardCard from './DashboardCard';
+import GraphComponent from './GraphComponent';
+// import Header from '@/components/Header';
 
 interface User {
     $id: string;
@@ -17,9 +22,9 @@ interface User {
   passwordUpdate?: string;
   registration: string;
   prefs?: Record<string, []>;
-    }
-export default function AdminDashboard() {
+    }   
 
+export default function AdminDashboard() {
   const [user, setUser] = useState<User | null>(null);
   const router = useRouter();
 
@@ -46,30 +51,28 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-          <div className="max-w-md mx-auto">
-            <div>
-              <h1 className="text-2xl font-semibold">Admin Dashboard</h1>
-            </div>
-            <div className="divide-y divide-gray-200">
-              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                <p>Welcome, {user.name}!</p>
-                <p>Email: {user.email}</p>
-              </div>
-              <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-                <button
-                  onClick={handleLogout}
-                  className="text-cyan-600 hover:text-cyan-700"
-                >
-                  Logout
-                </button>
-              </div>
-            </div>
+    <div className="flex">
+      {/* Sidebar */}
+      <Sidebar handleLogout={handleLogout} />
+
+      {/* Main content area */}
+      <div className="flex-1 ml-64">
+        <Header />
+        
+        <main className="p-6 space-y-6">
+          {/* Cards section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <DashboardCard title="Total Students" value="120" />
+            <DashboardCard title="Active Mentors" value="15" />
+            <DashboardCard title="Issues Resolved" value="45" />
           </div>
-        </div>
+
+          {/* Graph section */}
+          <GraphComponent />
+
+        </main>
+
+        {/* <Footer /> */}
       </div>
     </div>
   );

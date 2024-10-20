@@ -1,17 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { login, isLoggedIn } from '@/lib/appwrite';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  if (isLoggedIn()) {
-    router.push('/internal-portal-cm4sj');
-  }
+  useEffect(() => {
+    const checkLoggedIn = async () => {
+      const loggedIn = await isLoggedIn();
+      if (loggedIn) {
+        router.push('/internal-portal-cm4sj');
+      } else {
+        setLoading(false); // Stop loading once user is not logged in
+      }
+    };
+
+    checkLoggedIn();
+  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,6 +32,10 @@ export default function Login() {
       alert('Login failed. Please check your credentials.');
     }
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">

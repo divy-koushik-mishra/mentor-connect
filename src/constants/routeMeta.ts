@@ -14,8 +14,8 @@ export const ROUTES_META = {
     "/internal-portal-cm4sj": {
         title: "Internal Portal",
         description: "Internal Portal",
-        showNav: true,
-        showFooter: true,
+        showNav: false,
+        showFooter: false,
     },
     "/internal-portal-cm4sj/auth": {
         title: "Login",
