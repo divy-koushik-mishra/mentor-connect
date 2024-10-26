@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {  isLoggedIn } from '@/lib/appwrite';
-import Header from './AdminHeader';
 import DashboardCard from './DashboardCard';
 import GraphComponent from './GraphComponent';
 
@@ -33,11 +32,9 @@ export default function AdminDashboard() {
 
   return (
     <div className="flex flex-col h-screen bg-blue-50">
-      {/* Sidebar */}
-      {/* <Sidebar /> */}
+
 
       {/* Main content area */}
-        <Header/>
       <div className="flex-1 ">
 
         <main className="p-6 space-y-6">
