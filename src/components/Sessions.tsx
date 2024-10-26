@@ -22,7 +22,7 @@ const Sessions: React.FC = () => {
       image: 'https://media.licdn.com/dms/image/v2/D5603AQHIiw6mXJWe7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719018958103?e=1734566400&v=beta&t=GnkDFZIMuwTn3w19_zUgkzlX9Qfr-SvL6QPp-XlKVEc',
     },
     {
-      name: 'Kanishka Mandherna',
+      name: 'Kanishka Manderna',
       profession: 'Operations Manager',
       experience: 4,
       description: 'I am an Operations Manager at ITC Limited, a multinational conglomerate in India, where I manage operations and drive product innovation and launches for Sunbean Coffee and Fabelle Exquisite Chocolates, two of the premium brands of ITC. I have a Bachelor of Technology in Chemical Engineering and a Minor degree in Business Administration and Management from Indian Institute of Technology, Delhi. I did my research entern from ETH Zurich in my 2nd year',
@@ -49,6 +49,20 @@ const Sessions: React.FC = () => {
       experience: 4,
       description: 'Hi! I am Valaya Ramchandani, a Quantitative Researcher at JPMC, currently based in Mumbai, India. In my role, I specialize in quantitative analysis within the housing securities sector in the US, focusing on building models for risk assessment, forecasting, and stress testing. My work involves creating robust risk models to help analyze market trends and evaluate potential impacts on housing securities portfolios. Outside of work, I enjoy painting, playing guitar, and hiking.',
       image: 'https://media.licdn.com/dms/image/v2/D4D03AQH6oFleXJgX_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679672645762?e=1734566400&v=beta&t=_q90yuTpN6UtzbiuzDdcDH2mVGMD95jb2GNegibSLH0',
+    },
+    {
+      name: 'Raghav Chaturvedi',
+      profession: 'Quantitative Researcher',
+      experience: 4,
+      description: 'Hi! I’m a graduate student in applied physics at Cornell University. My research falls broadly in the regime of experimental condensed matter physics. I use the platform of van der Waals materials to discover, manipulate, and probe novel quantum states of matter. So far in my PhD, I’ve employed advanced quantum transport and optical techniques to study the physics of exciton condensation, Bose-Fermi mixtures and strongly correlated electronic phases in moire materials down to milliKelvin temperatures. Before this, I completed my bachelors degree in engineering physics from IIT Delhi in 2021.',
+      image: 'https://media.licdn.com/dms/image/v2/C4E03AQHrKDag8hbExQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1624466599149?e=1735171200&v=beta&t=u5SxGfgkEf0tL9YnxpviBWV3JBiM-qUD0SRlx8m-H_M',
+    },
+    {
+      name: 'Surbhi Agrawal',
+      profession: 'Quantitative Researcher',
+      experience: 5,
+      description: 'Hey, I’m Surbhi Agrawal, an engineer at heart and more specifically roboticist currently based out of New York. I’ve had the  chance to tinker all around the globe. My previous experiences include working at EPFL Switzerland, Honda R&D, Tokyo and at my Alma mater IIT Delhi. You can now a days find me trying to obtain a graduate degree at Columbia University with robotics concentration.',
+      image: 'https://media.licdn.com/dms/image/v2/C4E03AQFgXs5XDbsREA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1522311043140?e=1735171200&v=beta&t=ZOc0DSakldTS5kRY-BbKo4vP79WbQjSubcNNPpYu1eM',
     },
     // Add more mentor objects here to test scrolling
   ];

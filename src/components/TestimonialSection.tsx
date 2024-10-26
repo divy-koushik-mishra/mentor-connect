@@ -44,29 +44,41 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 const TestimonialSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-        name: "Rohit Sharma",
-        role: "B.Tech Student, Computer Science",
+        name: "Ruchika Meel",
+        role: "",
         review:
-          "The mentorship program gave me the confidence to apply for internships. The mock interviews and resume guidance were a huge help!",
+          "This program helped me explore my chances of getting into foreign exchange programs in my field of interest. ",
       },
       {
-        name: "Anjali Verma",
-        role: "MBA Student, Marketing",
+        name: "Naina Mittal",
+        role: "",
         review:
-          "The guidance I received from my mentor was exceptional. It helped me navigate through the career choices I had and land a great opportunity.",
+          "My mentor gave me helpful advice on how to prepare for job and scholarship interviews. The mock interviews were really helpful.",
       },
       {
-        name: "Vikram Singh",
-        role: "B.Sc Student, Physics",
+        name: "Apurva",
+        role: "",
         review:
-          "My mentor’s advice and suggestions were instrumental in helping me secure my research internship. Highly recommend this program.",
+          "My mentor was always available for all kind of questions. He helped me plan a schedule to balance studies and clubs in college.",
         
       },
       {
-        name: "Sakshi Mehra",
-        role: "B.Com Student, Finance",
+        name: "Vanshika",
+        role: "",
         review:
-          "This mentorship program really helped me understand how to build my career. My mentor was always available for questions and gave practical advice.",
+          "The exceptional guidance from my mentor helped me gain a perspective of how I can use my interest of coding for future opportunities.",
+      },
+      {
+        name: "Vrinda",
+        role: "",
+        review:
+          "This mentorship program helped me a lot in deciding preferences and priorities. That eased out the time iit became overwhelming.",
+      },
+      {
+        name: "Ayushmaan Rajori",
+        role: "",
+        review:
+          "The mentorship program was a game-changer for me. My mentor provided invaluable advice, helping me clarify my career goals and guiding me through each step of the process. Thanks to their support, I secured an amazing job opportunity",
       },
     ];
 

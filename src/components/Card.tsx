@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Briefcase, Clock } from 'lucide-react';
+import { Briefcase, Clock } from 'lucide-react';
 import Image from 'next/image';
 
 interface MentorCardProps {
@@ -38,10 +38,10 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
         <p className="text-gray-600 mb-4">{description}</p>
         </div>
 
-        <button className="bg-[#2B2B2B] text-white px-4 py-2 rounded-full  flex items-center justify-center w-full">
+        {/* <button className="bg-[#2B2B2B] text-white px-4 py-2 rounded-full  flex items-center justify-center w-full">
           Book a Session
           <User className="w-5 h-5 ml-2" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
