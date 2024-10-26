@@ -26,7 +26,7 @@ const Sessions: React.FC = () => {
       profession: 'Operations Manager',
       experience: 4,
       description: 'I am an Operations Manager at ITC Limited, a multinational conglomerate in India, where I manage operations and drive product innovation and launches for Sunbean Coffee and Fabelle Exquisite Chocolates, two of the premium brands of ITC. I have a Bachelor of Technology in Chemical Engineering and a Minor degree in Business Administration and Management from Indian Institute of Technology, Delhi. I did my research entern from ETH Zurich in my 2nd year',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQHFDEI6w5xxGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719125682986?e=1734566400&v=beta&t=6RurfhtrBidiNcwcp5L52RsAfYERKVE8rqz2AgSyFl4',
+      image: '/kaniska.jpeg',
     },
     {
       name: 'Saksham Saxena',
@@ -48,7 +48,7 @@ const Sessions: React.FC = () => {
       profession: 'Quantitative Researcher',
       experience: 4,
       description: 'Hi! I am Valaya Ramchandani, a Quantitative Researcher at JPMC, currently based in Mumbai, India. In my role, I specialize in quantitative analysis within the housing securities sector in the US, focusing on building models for risk assessment, forecasting, and stress testing. My work involves creating robust risk models to help analyze market trends and evaluate potential impacts on housing securities portfolios. Outside of work, I enjoy painting, playing guitar, and hiking.',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQH6oFleXJgX_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679672645762?e=1734566400&v=beta&t=_q90yuTpN6UtzbiuzDdcDH2mVGMD95jb2GNegibSLH0',
+      image: '/valaya.jpeg',
     },
     {
       name: 'Raghav Chaturvedi',

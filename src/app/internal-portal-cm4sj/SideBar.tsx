@@ -143,10 +143,10 @@ export default function Sidebar() {
       }`}
     >
       <div>
-        <div className="p-6 font-bold flex items-center justify-between border-b">
+        <div className="py-6 pl-6 font-bold flex items-center justify-between border-b">
           {!isCollapsed && (
             <span className="text-xl text-pink-500">
-              Celestial
+              Mentor Connect
             </span>
           )}
           <button 
