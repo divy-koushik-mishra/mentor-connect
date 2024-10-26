@@ -22,7 +22,7 @@ const Hero = () => {
           className="md:w-1/2 w-full px-10 py-3 border md:py-5 rounded-full outline-none"
           placeholder="Email Address..."
         /> */}
-        <button className="border flex w-fit items-center justify-between px-9 py-2 border-[#AEAEAE] hover:bg-[#c7c7c7] hover:text-black transition rounded-full">
+        <button className="border flex w-fit items-center justify-between px-9 py-3 border-[#AEAEAE] hover:bg-[#c7c7c7] hover:text-black transition rounded-full">
             Connect with Mentor
             <svg
               xmlns="http://www.w3.org/2000/svg"

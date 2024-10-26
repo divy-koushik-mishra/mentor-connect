@@ -19,7 +19,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   role,
   review,
 }) => (
-  <div className="bg-white shadow-lg p-6 flex flex-col h-full rounded-xl">
+  <div className="bg-white shadow-lg p-6 flex flex-col h-full  justify-center rounded-xl">
     <div className="flex items-center mb-4">
       {/* <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" /> */}
       <div>

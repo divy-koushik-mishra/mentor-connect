@@ -2,14 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, isLoggedIn, logout } from '@/lib/appwrite';
-import Sidebar from './SideBar';
+import { getCurrentUser, isLoggedIn } from '@/lib/appwrite';
 import Header from './AdminHeader';
 import DashboardCard from './DashboardCard';
 import GraphComponent from './GraphComponent';
-import RequestList from './RequestList'; // New component to show student requests
-import MentorList from './MentorList'; // New component for managing mentors
-import Notifications from './Notifications'; // Optional for mentor or request-related alerts
+
 
 interface User {
   $id: string;
@@ -45,11 +42,6 @@ export default function AdminDashboard() {
     checkAuth();
   }, [router]);
 
-  const handleLogout = async () => {
-    await logout();
-    router.push('/internal-portal-cm4sj/auth');
-  };
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -57,10 +49,10 @@ export default function AdminDashboard() {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <Sidebar handleLogout={handleLogout} />
+      {/* <Sidebar /> */}
 
       {/* Main content area */}
-      <div className="flex-1 ml-64 overflow-y-scroll">
+      <div className="flex-1 ">
         <Header user={user} />
 
         <main className="p-6 space-y-6">
@@ -78,24 +70,7 @@ export default function AdminDashboard() {
             <h2 className="text-xl font-bold mb-4">Mentorship Requests Over Time</h2>
             <GraphComponent />
           </div>
-
-          {/* Notifications (Optional) */}
-          <div className="bg-white shadow rounded p-4">
-            <h2 className="text-xl font-bold mb-4">Notifications</h2>
-            <Notifications />
-          </div>
-
-          {/* Student Request Management */}
-          <div className="bg-white shadow rounded p-4">
-            <h2 className="text-xl font-bold mb-4">Student Requests</h2>
-            <RequestList /> {/* Component to display list of student requests */}
-          </div>
-
-          {/* Mentor Management */}
-          <div className="bg-white shadow rounded p-4">
-            <h2 className="text-xl font-bold mb-4">Mentor Management</h2>
-            <MentorList /> {/* Component to manage mentors */}
-          </div>
+{/*  */}
 
         </main>
       </div>

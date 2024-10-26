@@ -2,17 +2,23 @@
 
 import { useRouter } from 'next/navigation';
 import { Home, Settings, Users, GraduationCap, Calendar, LogOut } from 'lucide-react';
+import { logout } from '@/lib/appwrite';
 
-export default function Sidebar({ handleLogout }: { handleLogout: () => void }) {
+export default function Sidebar() {
   const router = useRouter();
 
   const menuItems = [
     { name: 'Dashboard', icon: Home, path: '/internal-portal-cm4sj/' },
     { name: 'Mentors', icon: Users, path: '/internal-portal-cm4sj/mentors' },
-    { name: 'Students', icon: GraduationCap, path: '/internal-portal-cm4sj/students' },
+    { name: 'Students', icon: GraduationCap, path: '/internal-portal-cm4sj/student-list' },
     { name: 'Schedule', icon: Calendar, path: '/internal-portal-cm4sj/schedule' },
     { name: 'Settings', icon: Settings, path: '/internal-portal-cm4sj/settings' },
   ];
+
+  const handleLogout = async () => {
+    await logout();
+    router.push('/internal-portal-cm4sj/auth');
+  };
 
   return (
     <aside className="bg-gradient-to-b from-blue-900 to-indigo-900 text-white h-screen w-64 fixed top-0 left-0 flex flex-col justify-between shadow-xl">
