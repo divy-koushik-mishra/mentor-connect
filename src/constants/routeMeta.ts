@@ -23,4 +23,10 @@ export const ROUTES_META = {
         showNav: false,
         showFooter: false,
     },
+    "/internal-portal-cm4sj/student-list": {
+        title: "Login",
+        description: "Login to Internal Portal",
+        showNav: false,
+        showFooter: false,
+    },
 };

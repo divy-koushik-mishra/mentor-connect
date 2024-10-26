@@ -1,40 +1,34 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
   name: string;
   role: string;
   review: string;
-  rating: number;
-  image: string;
 }
 
 interface TestimonialCardProps {
   name: string;
   role: string;
   review: string;
-  rating: number;
-  image: string;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   role,
   review,
-  rating,
-  image,
 }) => (
-  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+  <div className="bg-white shadow-lg p-6 flex flex-col h-full  justify-center rounded-xl">
     <div className="flex items-center mb-4">
-      <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" />
+      {/* <img src={image} alt={name} className="w-12 h-12 rounded-full mr-4" /> */}
       <div>
         <h4 className="font-semibold text-lg">{name}</h4>
         <p className="text-gray-600 text-sm">{role}</p>
       </div>
     </div>
     <p className="text-gray-700 mb-4 flex-grow">{review}</p>
-    <div className="flex items-center">
+    {/* <div className="flex items-center">
       {[...Array(5)].map((_, i) => (
         <Star
           key={i}
@@ -43,43 +37,48 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           }`}
         />
       ))}
-    </div>
+    </div> */}
   </div>
 );
 
 const TestimonialSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-        name: "Rohit Sharma",
-        role: "B.Tech Student, Computer Science",
+        name: "Ruchika Meel",
+        role: "",
         review:
-          "The mentorship program gave me the confidence to apply for internships. The mock interviews and resume guidance were a huge help!",
-        rating: 5,
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+          "This program helped me explore my chances of getting into foreign exchange programs in my field of interest. ",
       },
       {
-        name: "Anjali Verma",
-        role: "MBA Student, Marketing",
+        name: "Naina Mittal",
+        role: "",
         review:
-          "The guidance I received from my mentor was exceptional. It helped me navigate through the career choices I had and land a great opportunity.",
-        rating: 5,
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
+          "My mentor gave me helpful advice on how to prepare for job and scholarship interviews. The mock interviews were really helpful.",
       },
       {
-        name: "Vikram Singh",
-        role: "B.Sc Student, Physics",
+        name: "Apurva",
+        role: "",
         review:
-          "My mentor’s advice and suggestions were instrumental in helping me secure my research internship. Highly recommend this program.",
-        rating: 4,
-        image: "https://randomuser.me/api/portraits/men/40.jpg",
+          "My mentor was always available for all kind of questions. He helped me plan a schedule to balance studies and clubs in college.",
+        
       },
       {
-        name: "Sakshi Mehra",
-        role: "B.Com Student, Finance",
+        name: "Vanshika",
+        role: "",
         review:
-          "This mentorship program really helped me understand how to build my career. My mentor was always available for questions and gave practical advice.",
-        rating: 5,
-        image: "https://randomuser.me/api/portraits/women/22.jpg",
+          "The exceptional guidance from my mentor helped me gain a perspective of how I can use my interest of coding for future opportunities.",
+      },
+      {
+        name: "Vrinda",
+        role: "",
+        review:
+          "This mentorship program helped me a lot in deciding preferences and priorities. That eased out the time iit became overwhelming.",
+      },
+      {
+        name: "Ayushmaan Rajori",
+        role: "",
+        review:
+          "The mentorship program was a game-changer for me. My mentor provided invaluable advice, helping me clarify my career goals and guiding me through each step of the process. Thanks to their support, I secured an amazing job opportunity",
       },
     ];
 
