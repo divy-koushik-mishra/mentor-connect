@@ -2,29 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getCurrentUser, isLoggedIn } from '@/lib/appwrite';
+import {  isLoggedIn } from '@/lib/appwrite';
 import Header from './AdminHeader';
 import DashboardCard from './DashboardCard';
 import GraphComponent from './GraphComponent';
 
 
-interface User {
-  $id: string;
-  $createdAt: string;
-  $updatedAt: string;
-  name: string;
-  email: string;
-  emailVerification: boolean;
-  phone?: string;
-  phoneVerification?: boolean;
-  status: boolean;
-  passwordUpdate?: string;
-  registration: string;
-  prefs?: Record<string, []>;
-}
-
 export default function AdminDashboard() {
-  const [user, setUser] = useState<User | null>(null);
+  // const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true); // Loading state for smoother UX
   const router = useRouter();
 
@@ -34,8 +19,8 @@ export default function AdminDashboard() {
       if (!loggedIn) {
         router.push('/internal-portal-cm4sj/auth');
       } else {
-        const currentUser = await getCurrentUser();
-        setUser(currentUser);
+        // const currentUser = await getCurrentUser();
+        // setUser(currentUser);
         setLoading(false); // Once data is loaded, set loading to false
       }
     };
@@ -47,13 +32,13 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col h-screen bg-blue-100">
       {/* Sidebar */}
       {/* <Sidebar /> */}
 
       {/* Main content area */}
+        <Header/>
       <div className="flex-1 ">
-        <Header user={user} />
 
         <main className="p-6 space-y-6">
           {/* Cards section */}
