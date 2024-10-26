@@ -5,67 +5,84 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Mentor {
   name: string;
+  college: string;
   profession: string;
+  company: string;
   experience: number;
   description: string;
   image?: string;
 }
 
+
 const Sessions: React.FC = () => {
   const mentors: Mentor[] = [
     {
-      name: 'Shubh Gupta',
-      profession: 'AI Engineer',
+      name: "Shubh Gupta",
+      college: "IITD",
+      profession: "AI Engineer",
+      company: "ThirdAI",
       experience: 2,
       description:
-        'Hi! I’m an AI Engineer based in Houston, Texas, United States. I graduated with a degree in Mathematics and Computing from IIT Delhi in 2022. Since then, I’ve worked on a diverse range of projects, including Self-Driving cars, LLMs, Distributed Training, and Agentic workflows for LLMs. Currently, I’m part of the team at ThirdAI, where I design high-throughput and low-latency systems at scale for retrieval-augmented generation (RAG). Additionally, I serve as a Lead Engineer part-time at a stealth startup, focusing on designing scalable search and recommender systems.',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQHIiw6mXJWe7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719018958103?e=1734566400&v=beta&t=GnkDFZIMuwTn3w19_zUgkzlX9Qfr-SvL6QPp-XlKVEc',
+        "Hi! I'm an AI Engineer based in Houston, Texas, United States. I graduated with a degree in Mathematics and Computing from IIT Delhi in 2022. Since then, I've worked on a diverse range of projects, including Self-Driving cars, LLMs, Distributed Training, and Agentic workflows for LLMs. Currently, I'm part of the team at ThirdAI, where I design high-throughput and low-latency systems at scale for retrieval-augmented generation (RAG). Additionally, I serve as a Lead Engineer part-time at a stealth startup, focusing on designing scalable search and recommender systems.",
+      image: "https://media.licdn.com/dms/image/v2/D5603AQHIiw6mXJWe7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719018958103?e=1734566400&v=beta&t=GnkDFZIMuwTn3w19_zUgkzlX9Qfr-SvL6QPp-XlKVEc",
     },
     {
-      name: 'Kanishka Manderna',
-      profession: 'Operations Manager',
+      name: "Kanishka Manderna",
+      college: "IITD",
+      profession: "Operations Manager",
+      company: "ITC Limited",
       experience: 4,
-      description: 'I am an Operations Manager at ITC Limited, a multinational conglomerate in India, where I manage operations and drive product innovation and launches for Sunbean Coffee and Fabelle Exquisite Chocolates, two of the premium brands of ITC. I have a Bachelor of Technology in Chemical Engineering and a Minor degree in Business Administration and Management from Indian Institute of Technology, Delhi. I did my research entern from ETH Zurich in my 2nd year',
-      image: '/kaniska.jpeg',
+      description: "I am an Operations Manager at ITC Limited, a multinational conglomerate in India, where I manage operations and drive product innovation and launches for Sunbean Coffee and Fabelle Exquisite Chocolates, two of the premium brands of ITC. I have a Bachelor of Technology in Chemical Engineering and a Minor degree in Business Administration and Management from Indian Institute of Technology, Delhi. I did my research intern from ETH Zurich in my 2nd year",
+      image: "/kaniska.jpeg",
     },
     {
-      name: 'Saksham Saxena',
-      profession: 'Product Designer',
+      name: "Saksham Saxena",
+      college: "IITD",
+      profession: "Product Designer",
+      company: "Microsoft",
       experience: 5,
       description:
-        'Hi! I am a Product Designer currently based in Seattle, Washington, United States. I have been actively involved in digital product design since 2019 across a range of domains, including web experiences, fintech, productivity, wearables, and IoT. I have previously worked at Adyen, Amsterdam and Microsoft, India. I enjoy working at the crossroads of psychology, technology, and creativity.',
-      image: 'https://media.licdn.com/dms/image/v2/C5103AQF291ROcWTnYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1563447351526?e=1734566400&v=beta&t=VzNJbzQcnECPCAddAbbfCYk6ZR2AJVN7GtuugwKuods',
+        "Hi! I am a Product Designer currently based in Seattle, Washington, United States. I have been actively involved in digital product design since 2019 across a range of domains, including web experiences, fintech, productivity, wearables, and IoT. I have previously worked at Adyen, Amsterdam and Microsoft, India. I enjoy working at the crossroads of psychology, technology, and creativity.",
+      image: "https://media.licdn.com/dms/image/v2/C5103AQF291ROcWTnYQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1563447351526?e=1734566400&v=beta&t=VzNJbzQcnECPCAddAbbfCYk6ZR2AJVN7GtuugwKuods",
     },
     {
-      name: 'Shorya Jain',
-      profession: 'Private Equity Analyst',
+      name: "Shorya Jain",
+      college: "IITD",
+      profession: "Private Equity Analyst",
+      company: "Bain Capital",
       experience: 4,
-      description: 'Hi! I am Shorya Jain, a Private Equity Analyst currently based in Mumbai, India. I began my career in strategy consulting before transitioning to private equity, where I have developed expertise in areas such as strategy, post merger integration, and data analysis. I was seconded to Amsterdam to set up cross sell for an IT services portfolio company for 6 months. I enjoy working at the intersection of finance, strategy, and data-driven insights. Outside of work, I spend my time reading, swimming, and playing guitar.',
-      image: 'https://media.licdn.com/dms/image/v2/C4E03AQH8oXZ3Wh6Xow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1623861823485?e=1734566400&v=beta&t=xqDtlZ95RGJe1XiE0obtxeBHWSZwUdU5KUl5HJvBj5c',
+      description: "Hi! I am Shorya Jain, a Private Equity Analyst currently based in Mumbai, India. I began my career in strategy consulting before transitioning to private equity, where I have developed expertise in areas such as strategy, post-merger integration, and data analysis. I was seconded to Amsterdam to set up cross-sell for an IT services portfolio company for 6 months. I enjoy working at the intersection of finance, strategy, and data-driven insights. Outside of work, I spend my time reading, swimming, and playing guitar.",
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQH8oXZ3Wh6Xow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1623861823485?e=1734566400&v=beta&t=xqDtlZ95RGJe1XiE0obtxeBHWSZwUdU5KUl5HJvBj5c",
     },
     {
-      name: 'Valaya Ramchandani',
-      profession: 'Quantitative Researcher',
+      name: "Valaya Ramchandani",
+      college: "IITD",
+      profession: "Quantitative Researcher",
+      company: "JP Morgan Chase",
       experience: 4,
-      description: 'Hi! I am Valaya Ramchandani, a Quantitative Researcher at JPMC, currently based in Mumbai, India. In my role, I specialize in quantitative analysis within the housing securities sector in the US, focusing on building models for risk assessment, forecasting, and stress testing. My work involves creating robust risk models to help analyze market trends and evaluate potential impacts on housing securities portfolios. Outside of work, I enjoy painting, playing guitar, and hiking.',
-      image: '/valaya.jpeg',
+      description: "Hi! I am Valaya Ramchandani, a Quantitative Researcher at JPMC, currently based in Mumbai, India. In my role, I specialize in quantitative analysis within the housing securities sector in the US, focusing on building models for risk assessment, forecasting, and stress testing. My work involves creating robust risk models to help analyze market trends and evaluate potential impacts on housing securities portfolios. Outside of work, I enjoy painting, playing guitar, and hiking.",
+      image: "/valaya.jpeg",
     },
     {
-      name: 'Raghav Chaturvedi',
-      profession: 'Quantitative Researcher',
+      name: "Raghav Chaturvedi",
+      college: "IITD",
+      profession: "PhD Student",
+      company: "Cornell University",
       experience: 4,
-      description: 'Hi! I’m a graduate student in applied physics at Cornell University. My research falls broadly in the regime of experimental condensed matter physics. I use the platform of van der Waals materials to discover, manipulate, and probe novel quantum states of matter. So far in my PhD, I’ve employed advanced quantum transport and optical techniques to study the physics of exciton condensation, Bose-Fermi mixtures and strongly correlated electronic phases in moire materials down to milliKelvin temperatures. Before this, I completed my bachelors degree in engineering physics from IIT Delhi in 2021.',
-      image: 'https://media.licdn.com/dms/image/v2/C4E03AQHrKDag8hbExQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1624466599149?e=1735171200&v=beta&t=u5SxGfgkEf0tL9YnxpviBWV3JBiM-qUD0SRlx8m-H_M',
+      description: "Hi! I'm a graduate student in applied physics at Cornell University. My research falls broadly in the regime of experimental condensed matter physics. I use the platform of van der Waals materials to discover, manipulate, and probe novel quantum states of matter. So far in my PhD, I've employed advanced quantum transport and optical techniques to study the physics of exciton condensation, Bose-Fermi mixtures and strongly correlated electronic phases in moire materials down to milliKelvin temperatures. Before this, I completed my bachelor's degree in engineering physics from IIT Delhi in 2021.",
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQHrKDag8hbExQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1624466599149?e=1735171200&v=beta&t=u5SxGfgkEf0tL9YnxpviBWV3JBiM-qUD0SRlx8m-H_M",
     },
     {
-      name: 'Surbhi Agrawal',
-      profession: 'Quantitative Researcher',
+      name: "Surbhi Agrawal",
+      college: "IITD",
+      profession: "PhD Student",
+      company: "Columbia University",
       experience: 5,
-      description: 'Hey, I’m Surbhi Agrawal, an engineer at heart and more specifically roboticist currently based out of New York. I’ve had the  chance to tinker all around the globe. My previous experiences include working at EPFL Switzerland, Honda R&D, Tokyo and at my Alma mater IIT Delhi. You can now a days find me trying to obtain a graduate degree at Columbia University with robotics concentration.',
-      image: 'https://media.licdn.com/dms/image/v2/C4E03AQFgXs5XDbsREA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1522311043140?e=1735171200&v=beta&t=ZOc0DSakldTS5kRY-BbKo4vP79WbQjSubcNNPpYu1eM',
+      description: "Hey, I'm Surbhi Agrawal, an engineer at heart and more specifically roboticist currently based out of New York. I've had the chance to tinker all around the globe. My previous experiences include working at EPFL Switzerland, Honda R&D, Tokyo and at my Alma mater IIT Delhi. You can nowadays find me trying to obtain a graduate degree at Columbia University with a robotics concentration.",
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQFgXs5XDbsREA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1522311043140?e=1735171200&v=beta&t=ZOc0DSakldTS5kRY-BbKo4vP79WbQjSubcNNPpYu1eM",
     },
-    // Add more mentor objects here to test scrolling
-  ];
+];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
