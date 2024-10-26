@@ -32,7 +32,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-blue-100">
+    <div className="flex flex-col h-screen bg-blue-50">
       {/* Sidebar */}
       {/* <Sidebar /> */}
 
