@@ -5,6 +5,7 @@ import TopBar from "./TopBar";
 import { RiCloseFill, RiMenu2Line } from '@remixicon/react';
 import { usePathname } from 'next/navigation';
 import { ROUTES_META } from '@/constants/routeMeta';
+import Image from 'next/image';
 // import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -41,9 +42,12 @@ const Navbar = () => {
   return (
     <header>
       <TopBar />
-      <nav className="relative flex flex-col md:flex-row md:justify-between md:items-center py-5 px-4 md:px-24">
+      <nav className="relative flex flex-col md:flex-row md:justify-between md:items-center py-1 px-4 md:px-24">
         <div className="flex justify-between items-center w-full">
-          <div className="md:text-3xl text-2xl">Mentor Connect</div>
+          <div className="md:text-3xl text-2xl">
+            <Image src="/logo.png" alt="logo" width={1386} height={571} quality={100} className=' w-40 h-16'/>
+          </div>
+          {/* <div className="md:text-3xl text-2xl">Mentor Connect</div> */}
           <button
             className="md:hidden z-50"
             onClick={toggleDrawer}
