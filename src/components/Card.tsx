@@ -1,16 +1,26 @@
 import React from 'react';
 import { Briefcase, Clock } from 'lucide-react';
 import Image from 'next/image';
+import { RiGraduationCapFill } from '@remixicon/react';
 
-interface MentorCardProps {
+interface MentorProps {
   name: string;
+  college: string;
   profession: string;
+  company: string;
   experience: number;
   description: string;
   image?: string;
 }
 
-const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, description, image }) => {
+
+const MentorCard: React.FC<MentorProps> = ({ name,
+  college,
+  profession,
+  company,
+  experience,
+  description,
+  image, }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden ">
       <div className="relative h-56">
@@ -28,8 +38,12 @@ const MentorCard: React.FC<MentorCardProps> = ({ name, profession, experience, d
       <div className="p-4 min-h-[480px] flex flex-col justify-between">
         <div className="">
         <div className="flex items-center mb-2">
+          <RiGraduationCapFill className="w-5 h-5 text-gray-500 mr-2" />
+          <p className="text-gray-700">{college}</p>
+        </div>
+        <div className="flex items-center mb-2">
           <Briefcase className="w-5 h-5 text-gray-500 mr-2" />
-          <p className="text-gray-700">{profession}</p>
+          <p className="text-gray-700">{profession}, {company }</p>
         </div>
         <div className="flex items-center mb-3">
           <Clock className="w-5 h-5 text-gray-500 mr-2" />
