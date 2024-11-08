@@ -5,16 +5,16 @@ export default function Component() {
   return (
     <section
       data-scroll
-      className="w-full flex flex-col justify-center items-center px-5 md:px-0 hero-bg"
+      className="w-full flex flex-col pt-10 items-center px-5 md:px-0 hero-bg border"
     >
       <div className="w-full max-w-7xl flex flex-col items-center">
-        <div className="w-full flex justify-center mt-8">
+        <div className="w-full flex justify-center">
           <Image
             src="/logo.png"
             alt="Company Logo"
             width={200}
             height={60}
-            className="w-28 md:w-36 h-auto mb-4"
+            className="w-60 h-auto mb-4"
           />
         </div>
         <div className="flex flex-col items-center justify-center w-full md:w-2/3 lg:w-1/2 space-y-7 mb-10 mt-0">
