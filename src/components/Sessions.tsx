@@ -49,7 +49,7 @@ const Sessions: React.FC = () => {
       name: "Shorya Jain",
       college: "IITD",
       profession: "Private Equity Analyst",
-      company: "Bain Capital",
+      company: "EMK  Capital",
       experience: 4,
       description: "Hi! I am Shorya Jain, a Private Equity Analyst currently based in Mumbai, India. I began my career in strategy consulting before transitioning to private equity, where I have developed expertise in areas such as strategy, post-merger integration, and data analysis. I was seconded to Amsterdam to set up cross-sell for an IT services portfolio company for 6 months. I enjoy working at the intersection of finance, strategy, and data-driven insights. Outside of work, I spend my time reading, swimming, and playing guitar.",
       image: "https://media.licdn.com/dms/image/v2/C4E03AQH8oXZ3Wh6Xow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1623861823485?e=1734566400&v=beta&t=xqDtlZ95RGJe1XiE0obtxeBHWSZwUdU5KUl5HJvBj5c",

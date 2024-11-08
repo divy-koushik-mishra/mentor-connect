@@ -20,11 +20,11 @@ const AboutFounder = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-black rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
               <div className="relative h-full bg-white rounded-xl overflow-hidden shadow-lg">
                 <Image 
-                  src="/founder.jpeg"
+                  src="/founder-2.jpeg"
                   alt="Founder"
                   height={400}
                   width={600}
-                  className="w-full h-[400px] object-cover transform group-hover:scale-105 transition duration-700"
+                  className="w-full h-[400px] object-cover  transform group-hover:scale-105 transition duration-700"
                 />
               </div>
             </div>
