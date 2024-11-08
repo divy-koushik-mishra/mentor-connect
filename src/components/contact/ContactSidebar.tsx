@@ -8,7 +8,7 @@ const ContactSidebar = () => {
                 <div className="">
 
                 <h3 className="text-xl font-semibold">Phone</h3>
-                <p>+91 123 456 7890</p>
+                <p>+91 870 093 9666</p>
                 </div>
 
                 <div className="">

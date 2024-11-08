@@ -1,5 +1,6 @@
 "use client"
 import { saveContactFormData } from "@/lib/appwrite";
+import { useSearchParams } from "next/navigation";
 import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,6 +31,12 @@ interface FormErrors {
 }
 
 const ContactForm: React.FC = () => {
+
+  const searchParams = useSearchParams();
+  const query = searchParams.get('email'); 
+
+
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -47,6 +54,10 @@ const ContactForm: React.FC = () => {
 
   useEffect(() => {
     const emailDomain = formData.email.split('@')[1];
+    setFormData((prevData) => ({
+      ...prevData,
+      email: query || "",
+    }));
     if (emailDomain && allowedEmailDomains[emailDomain]) {
       setFormData((prevData) => ({
         ...prevData,
