@@ -13,6 +13,7 @@ const allowedEmailDomains: AllowedEmailDomains = {
   "example.edu": "Example University",
   "college.edu": "College of Education",
   "university.ac.in": "University of Technology",
+  "iitd.ac.in" : "Indian Institute of Technology, Delhi",
 };
 
 interface FormData {
