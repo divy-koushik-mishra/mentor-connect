@@ -1,10 +1,12 @@
 
 import ContactForm from "@/components/contact/ContactForm";
 import ContactSidebar from "@/components/contact/ContactSidebar";
+import { Suspense } from "react";
 // import TestComp from "./testComp";
 
 const Contact = () => {
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <section className="w-full h-full flex justify-center items-center py-10 px-5 md:px-24">
       <div className="  flex flex-col items-center">
         <div className="">
@@ -21,6 +23,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </Suspense>
   );
 };
 
