@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Briefcase, Target, Users, Code, Brain, Coffee, Book } from 'lucide-react';
+import { GraduationCap, Briefcase, Target, Users, Coffee, Building, FlaskConical } from 'lucide-react';
 import Image from 'next/image';
 
 const AboutFounders = () => {
@@ -25,19 +25,20 @@ const AboutFounders = () => {
       title: "Co-founder",
       image: "kaniska.jpeg",
       stats: [
-        { icon: Code, label: "IIT Bombay", subtext: "B.Tech 2021" },
-        { icon: Brain, label: "Microsoft", subtext: "Software Engineer" },
-        { icon: Coffee, label: "Experience", subtext: "3+ Years" },
-        { icon: Book, label: "Projects", subtext: "50+" },
+        { icon: GraduationCap, label: "IIT Delhi", subtext: "Chemical Engineering" },
+        { icon: FlaskConical, label: "ETH Zurich", subtext: "Research Intern" },
+        { icon: Building, label: "ITC Limited", subtext: "Operations Manager" },
+        { icon: Coffee, label: "Premium Brands", subtext: "Sunbean & Fabelle" },
       ],
-      skills: ['Full Stack', 'System Design', 'ML/AI', 'Cloud Architecture'],
+      skills: ['Operations Management', 'Product Innovation', 'Business Strategy', 'Brand Development'],
       bio: {
-        education: "IIT Bombay, B.Tech in Computer Science (2021)",
-        current: "Currently a Software Engineer at Microsoft, focusing on cloud infrastructure and distributed systems.",
-        expertise: "Leading high-impact projects and developing scalable solutions used by millions of users worldwide.",
-        mission: "Passionate about bridging the gap between theoretical knowledge and practical implementation in tech."
+        education: "IIT Delhi, B.Tech in Chemical Engineering with Minor in Business Administration",
+        current: "Currently serving as Operations Manager at ITC Limited, managing premium brands Sunbean Coffee and Fabelle Exquisite Chocolates.",
+        expertise: "Driving product innovation and launches for premium brands, with experience in operations management and business strategy.",
+        mission: "Combining technical expertise with business acumen to drive innovation and operational excellence in premium consumer products."
       }
     }
+
   ];
 
   return (
@@ -56,7 +57,7 @@ const AboutFounders = () => {
                   alt={founder.title}
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-top"
                 />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">{founder.title}</h3>
